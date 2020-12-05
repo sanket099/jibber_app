@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorWhite">#FFF</color>
+
+    <color name="colorPrimary">#3282b8</color>
+    <color name="colorPrimaryDark">#3282b8</color>
+    <color name="colorAccent">#00bcd4</color>
+
+    <color name="colorSpaceUser">#623B5A</color>
+    <color name="colorSpaceBack">#212121</color>
+    <color name="colorSpaceBot">#4D212121</color>
+    <color name="colorSpaceSpare">#89608E</color>
+
+    <color name="colorBubbleUser">#3282b8</color>
+    <color name="colorBubbleBack">#b2ebf2</color>
+    <color name="colorBubbleBot">#4D3282b8</color>
+</resources>

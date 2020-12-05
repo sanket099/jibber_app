@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">frenBot</string>
+    <string name="about_bot">About Bot</string>
+    <string name="change_theme">Change Theme</string>
+    <string name="rate_this_app">Rate this App</string>
+    <string name="share_this_app">Share this App</string>
+    <string name="delete_chat">Delete Chat</string>
+    <string name="delete_all_chat">Delete All Chat?</string>
+    <string name="yes">Yes</string>
+    <string name="all_chats_del">All Messages Deleted</string>
+    <string name="no">No</string>
+</resources>

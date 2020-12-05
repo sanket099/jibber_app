@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'com.chaquo.python'
+
+    android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.san.jibberapp"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+
+        python {
+            buildPython "D:\\python3.6\\python.exe"
+
+            pip {
+                // A pip requirement specifier, with or without a version number:
+                install "nltk"
+                install "numpy"
+                install "tensorflow"
+                install "pandas"
+            }
+        }
+
+    }
+        flavorDimensions "abi"
+        productFlavors {
+            arm {
+                dimension "abi"
+                ndk { abiFilters "armeabi-v7a" }
+            }
+            x86 {
+                dimension "abi"
+                ndk { abiFilters "x86" }
+            }
+        }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+        sourceSets {
+            main {
+                python {
+                    srcDirs = ["src/main/python"]
+                }
+            }
+        }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "androidx.cardview:cardview:1.0.0"
+    // implementation 'org.tensorflow:tensorflow-lite-support:0.0.0-nightly'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+   // implementation group: "org.apache.opennlp", name: "opennlp-tools", version: "1.9.3"
+
+    def room_version = "2.2.5"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    def lifecycle_version = "2.2.0"
+    // def arch_version = "2.1.0"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+
+
+}
+repositories {
+    mavenCentral()
+}

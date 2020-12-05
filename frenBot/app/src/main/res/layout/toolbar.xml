@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBubbleUser"
+    android:elevation="0dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="start"
+            android:id="@+id/tv_bot_name"
+            android:fontFamily="@font/opensansregular_semibold"
+            android:textColor="@color/colorWhite"
+            android:text="My fren"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_bot_name"
+            android:textSize="14sp"
+            android:id="@+id/is_typing"
+           android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/opensans"
+            android:textColor="@color/colorWhite"
+            android:text="is typing ..."
+            android:layout_marginStart="10dp"/>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</androidx.appcompat.widget.Toolbar>
